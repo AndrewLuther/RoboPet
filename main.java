@@ -4,7 +4,6 @@ public class main {
         Robot George = new Robot("George");
         RobotViewer v1 = new RobotViewer(George);
 
-        //test
 
     }
 

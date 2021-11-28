@@ -10,8 +10,8 @@ public class Robot {
     private static final int MAX_HEALTH = 10;
     private static final int DEFAULT_HEALTH = 7;
     //private int exhaustion;
-    private static final int MAX_EXHAUST = 10;
-    private static final int DEFAULT_EXHAUST = 10;
+    //private static final int MAX_EXHAUST = 10;
+    //private static final int DEFAULT_EXHAUST = 10;
 
     public Robot(String name)
     {
@@ -45,15 +45,26 @@ public class Robot {
 
     public boolean isDead()
     {
-        if(health == 0)
-        {
-            return true;
-        }
+        if((health == 0) || (happiness) == 0 || (hunger == 0)) return true;
+        else return false;
+    }
 
-        else
-        {
-            return false;
-        }
+    public boolean isHappy()
+    {
+        if(happiness > 5) return true;
+        else return false;
+    }
+
+    public boolean isHealthy()
+    {
+        if(health > 5) return true;
+        else return false;
+    }
+
+    public boolean isHungry()
+    {
+        if(hunger > 5) return true;
+        else return false;
     }
 
     public void feed(Food food)

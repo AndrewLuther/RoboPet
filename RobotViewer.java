@@ -114,13 +114,19 @@ public class RobotViewer {
 
 
         //Layout Updates
+        //Stat Labels
         hungerLabel.setText("hunger: " + robot.getHunger());
         healthLabel.setText("health: " + robot.getHealth());
         happinessLabel.setText("happiness: " + robot.getHappiness());
         if(selectedFoodLabel != null) selectedFoodLabel.setText("Feeding: " + selectedFood.getName());
         
+        //face update
 
-        if(robot.isDead()) {robotFace.setText("x_x");}
+        if(robot.isDead()) robotFace.setText("x_x");
+        else if(!(robot.isHappy())) robotFace.setText("v_v");
+        else if(!(robot.isHungry())) robotFace.setText("._.");
+        else if(!(robot.isHealthy())) robotFace.setText("~_~");
+        else robotFace.setText("^_^");
 
     }
     
