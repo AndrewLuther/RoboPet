@@ -1,7 +1,6 @@
 Project: RoboPet
 Creator: Andrew Luther
 Creation Date: Nov 29 2021
-Version: 1.1
 
 RoboPet is a project inspired by a kid's toy called "Tamagotchi" which is a digital pet that the user can interact with.
 The program creates an instance of the Robot class which is displayed using a GUI implemented with the RobotViewer class. 
