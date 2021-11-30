@@ -23,6 +23,7 @@ public class RobotViewer {
         healthLabel = new JLabel("health: " + robot.getHealth());
         happinessLabel = new JLabel("happiness: " + robot.getHappiness());
         robotFace = new JLabel("^_^", SwingConstants.CENTER);
+        robotFace.setFont(new Font("Arial", Font.PLAIN, 35));
         nameLabel = new JLabel(robot.getName(), SwingConstants.CENTER);
         selectBanana();
         selectedFoodLabel = new JLabel("Feeding: " + selectedFood.getName());
@@ -71,6 +72,14 @@ public class RobotViewer {
         JButton playButton = new JButton("PLAY");
         SPanel.add(playButton); 
         playButton.addActionListener(ev -> {play(); update();});
+
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(0);
+            }
+
+        });
 
         frame.pack();
         frame.setVisible(true);
